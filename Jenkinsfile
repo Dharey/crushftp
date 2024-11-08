@@ -10,7 +10,11 @@ pipeline {
         parallelsAlwaysFailFast()
     }
     environment {
-        Name = "crushftp"
+        SERVICE_NAME = "crushftp"
+        ORGANIZATION_NAME = "deetechpro"
+        DOCKERHUB_USERNAME = "oluwaseyi12"
+        REPOSITORY_TAG = "${DOCKERHUB_USERNAME}/${ORGANIZATION_NAME}-${SERVICE_NAME}:${BUILD_ID}"
+        SCANNER_HOME= tool 'sonar-scanner
     }
 
     stages {
